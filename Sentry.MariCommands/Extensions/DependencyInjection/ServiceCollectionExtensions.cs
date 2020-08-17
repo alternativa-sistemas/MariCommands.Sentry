@@ -10,7 +10,8 @@ namespace Microsoft.Extensions.DependencyInjection
     /// <summary>
     /// Extension methods for <see cref="IServiceCollection"/>
     /// </summary>
-    public static class ServiceCollectionExtensions
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    internal static class ServiceCollectionExtensions
     {
         /// <summary>
         /// Adds Sentry's services to the <see cref="IServiceCollection"/>
@@ -19,7 +20,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         public static IServiceCollection AddSentry(this IServiceCollection services)
         {
-            services.AddSingleton<ISentryEventProcessor, MariCommandsEventProcessor>();
             services.TryAddSingleton<ICommandUserFactory, DefaultUserFactory>();
 
             services.AddSentry<SentryMariCommandsOptions>();

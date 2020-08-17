@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using MariCommands.Builder;
 using MariCommands.Extensions;
@@ -15,13 +16,14 @@ namespace Sentry.MariCommands
     /// <summary>
     /// Extension methods for <see cref="ICommandApplicationBuilder"/>
     /// </summary>
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public static class CommandApplicationBuilderExtensions
     {
         /// <summary>
         /// Use Sentry integration
         /// </summary>
         /// <param name="app">The application.</param>
-        /// <param name="registerSdkClose">Set it to false if this app is a Web ASP.NET Core app with the Sentry integration.</param>
+        /// <param name="registerSdkClose">Set it to <c>false</c> if this app is a Web ASP.NET Core app with the Sentry integration.</param>
         /// <returns></returns>
         public static ICommandApplicationBuilder UseSentry(this ICommandApplicationBuilder app, bool registerSdkClose = true)
         {
