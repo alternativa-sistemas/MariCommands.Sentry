@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MariCommands" Version="1.0.0.1-alpha" />
+    <PackageReference Include="Sentry.Extensions.Logging" Version="2.1.5" />
+  </ItemGroup>
+
 </Project>
