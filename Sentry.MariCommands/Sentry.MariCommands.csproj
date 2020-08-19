@@ -2,12 +2,30 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Sentry.MariCommands</PackageId>
+    <AssemblyName>Sentry.MariCommands</AssemblyName>
+    <RootNamespace>Sentry.MariCommands</RootNamespace>
+    <Version>2.1.5-alpha</Version>
+    <Authors>renanrcp</Authors>
+    <Company>MariBot</Company>
+    <Description>MariCommands integration for Sentry - Open-source error tracking that helps developers monitor and fix crashes in real time.</Description>
+    <Copyright>2019 - 2020 renanrcp. All rights reserved.</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/MariBotOfficial/Sentry.MariCommands/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageIcon>Sentry.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MariCommands" Version="1.0.0.1-alpha" />
     <PackageReference Include="Sentry.Extensions.Logging" Version="2.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Sentry.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 
 </Project>
