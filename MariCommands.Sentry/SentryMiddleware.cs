@@ -7,10 +7,11 @@ using MariCommands.Middlewares;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Sentry;
 using Sentry.Protocol;
 using Sentry.Reflection;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     internal class SentryMiddleware : ICommandMiddleware
     {

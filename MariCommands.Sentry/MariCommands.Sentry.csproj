@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>Sentry.MariCommands</PackageId>
-    <AssemblyName>Sentry.MariCommands</AssemblyName>
-    <RootNamespace>Sentry.MariCommands</RootNamespace>
+    <PackageId>MariCommands.Sentry</PackageId>
+    <AssemblyName>MariCommands.Sentry</AssemblyName>
+    <RootNamespace>MariCommands.Sentry</RootNamespace>
     <Version>2.1.5-alpha</Version>
     <Authors>renanrcp</Authors>
     <Company>MariBot</Company>
@@ -12,8 +12,8 @@
     <Copyright>2019 - 2020 renanrcp. All rights reserved.</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MariBotOfficial/MariCommands.Sentry</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MariBotOfficial/MariCommands.Sentry</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageIcon>Sentry.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

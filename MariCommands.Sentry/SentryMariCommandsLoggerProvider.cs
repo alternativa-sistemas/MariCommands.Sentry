@@ -1,8 +1,9 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Sentry;
 using Sentry.Extensions.Logging;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     [ProviderAlias("Sentry")]
     internal class SentryMariCommandsLoggerProvider : SentryLoggerProvider

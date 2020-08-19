@@ -1,8 +1,9 @@
 using System;
 using System.Linq;
+using Sentry;
 using Sentry.Extensions.Logging;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     /// <summary>
     /// An options class for the MariCommands Sentry integration

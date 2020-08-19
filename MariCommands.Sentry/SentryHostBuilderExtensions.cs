@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sentry.Extensibility;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     /// <summary>
     /// Extension methods to <see cref="IHostBuilder"/>

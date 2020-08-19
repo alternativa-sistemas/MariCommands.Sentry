@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging.Configuration;
 using Microsoft.Extensions.Options;
 using Sentry.Extensions.Logging;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     internal class SentryMariCommandsOptionsSetup : ConfigureFromConfigurationOptions<SentryMariCommandsOptions>
     {

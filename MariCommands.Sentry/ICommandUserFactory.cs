@@ -1,7 +1,7 @@
 using MariCommands;
 using Sentry.Protocol;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     /// <summary>
     /// Sentry User Factory

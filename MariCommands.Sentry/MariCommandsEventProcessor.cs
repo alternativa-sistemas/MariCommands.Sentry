@@ -1,12 +1,13 @@
 using System;
 using System.Linq;
 using Microsoft.Extensions.Options;
+using Sentry;
 using Sentry.Extensibility;
 using Sentry.Extensions.Logging;
 using Sentry.Protocol;
 using OperatingSystem = Sentry.Protocol.OperatingSystem;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     internal class MariCommandsEventProcessor : ISentryEventProcessor
     {

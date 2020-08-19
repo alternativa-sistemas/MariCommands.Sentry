@@ -7,11 +7,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Sentry;
 using Sentry.Extensibility;
 using Sentry.Extensions.Logging;
 using Sentry.Infrastructure;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     /// <summary>
     /// Extension methods for <see cref="ICommandApplicationBuilder"/>

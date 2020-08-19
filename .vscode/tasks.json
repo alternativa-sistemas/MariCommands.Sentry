@@ -7,7 +7,7 @@
       "type": "shell",
       "args": [
         "build",
-        "${workspaceFolder}/Sentry.MariCommands.Tests/Sentry.MariCommands.Tests.csproj",
+        "${workspaceFolder}/MariCommands.Sentry.Tests/MariCommands.Sentry.Tests.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -19,7 +19,7 @@
       "type": "shell",
       "args": [
         "publish",
-        "${workspaceFolder}/Sentry.MariCommands.Tests/Sentry.MariCommands.Tests.csproj",
+        "${workspaceFolder}/MariCommands.Sentry.Tests/MariCommands.Sentry.Tests.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -32,7 +32,7 @@
       "args": [
         "watch",
         "run",
-        "${workspaceFolder}/Sentry.MariCommands.Tests/Sentry.MariCommands.Tests.csproj",
+        "${workspaceFolder}/MariCommands.Sentry.Tests/MariCommands.Sentry.Tests.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

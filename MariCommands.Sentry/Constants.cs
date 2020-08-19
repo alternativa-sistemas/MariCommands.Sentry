@@ -1,4 +1,4 @@
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     internal static class Constants
     {

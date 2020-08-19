@@ -2,7 +2,7 @@ using System.ComponentModel;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Sentry.Extensibility;
 using Sentry.Extensions.Logging.Extensions.DependencyInjection;
-using Sentry.MariCommands;
+using MariCommands.Sentry;
 
 // ReSharper disable once CheckNamespace -- Discoverability
 namespace Microsoft.Extensions.DependencyInjection

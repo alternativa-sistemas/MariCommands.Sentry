@@ -2,7 +2,7 @@ using System.Diagnostics;
 using MariCommands;
 using Sentry.Protocol;
 
-namespace Sentry.MariCommands
+namespace MariCommands.Sentry
 {
     internal class DefaultUserFactory : ICommandUserFactory
     {

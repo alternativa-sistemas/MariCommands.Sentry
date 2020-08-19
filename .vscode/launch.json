@@ -10,9 +10,9 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/Sentry.MariCommands.Tests/bin/Debug/netcoreapp3.1/Sentry.MariCommands.Tests.dll",
+      "program": "${workspaceFolder}/MariCommands.Sentry.Tests/bin/Debug/netcoreapp3.1/MariCommands.Sentry.Tests.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/Sentry.MariCommands.Tests",
+      "cwd": "${workspaceFolder}/MariCommands.Sentry.Tests",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
       "stopAtEntry": false
