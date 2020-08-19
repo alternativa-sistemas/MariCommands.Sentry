@@ -30,14 +30,17 @@ namespace Sentry.MariCommands
         {
             _hubAccessor = hubAccessor ?? throw new ArgumentNullException(nameof(hubAccessor));
             _options = options?.Value;
+
             if (_options != null)
             {
                 var hub = _hubAccessor();
+
                 foreach (var callback in _options.ConfigureScopeCallbacks)
                 {
                     hub.ConfigureScope(callback);
                 }
             }
+
             _logger = logger;
         }
 
@@ -69,25 +72,9 @@ namespace Sentry.MariCommands
                 }
                 catch (Exception e)
                 {
-                    CaptureException(e);
+                    CaptureException(hub, context, e);
 
                     ExceptionDispatchInfo.Capture(e).Throw();
-                }
-
-                void CaptureException(Exception e)
-                {
-                    hub.ConfigureScope(scope =>
-                    {
-                        PopulateScope(context, scope);
-                    });
-
-                    var evt = new SentryEvent(e);
-
-                    _logger?.LogTrace("Sending event '{SentryEvent}' to Sentry.", evt);
-
-                    var id = hub.CaptureEvent(evt);
-
-                    _logger?.LogInformation("Event '{id}' queued.", id);
                 }
 
                 if (_options != null)
@@ -100,6 +87,22 @@ namespace Sentry.MariCommands
                     }
                 }
             }
+        }
+
+        private void CaptureException(IHub hub, CommandContext context, Exception e)
+        {
+            hub.ConfigureScope(scope =>
+            {
+                PopulateScope(context, scope);
+            });
+
+            var evt = new SentryEvent(e);
+
+            _logger?.LogTrace("Sending event '{SentryEvent}' to Sentry.", evt);
+
+            var id = hub.CaptureEvent(evt);
+
+            _logger?.LogInformation("Event '{id}' queued.", id);
         }
 
         internal void PopulateScope(CommandContext context, Scope scope)
