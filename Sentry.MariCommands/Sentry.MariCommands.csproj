@@ -14,9 +14,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MariBotOfficial/Sentry.MariCommands</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/MariBotOfficial/Sentry.MariCommands/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageIcon>Sentry.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <None Include="Sentry.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\LICENSE" Pack="true" Visible="true" PackagePath="" />
   </ItemGroup>
 
 </Project>
