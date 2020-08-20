@@ -24,8 +24,6 @@ namespace MariCommands.Sentry
                 = options.Environment // Don't override user defined value, from SentryAspNetCore
                   ?? EnvironmentLocator.Locate() // Sentry specific environment takes precedence #92, from SentryAspNetCore
                   ?? _hostingEnvironment?.EnvironmentName;
-
-            // TODO: Add log entry filter to Exception Middleware.
         }
     }
 }

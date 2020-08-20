@@ -88,10 +88,9 @@ namespace MariCommands.Sentry
                 }
 
 
-                // TODO: Set the Exception Middleware message
-                // logging.AddFilter<SentryMariCommandsLoggerProvider>(
-                //     "Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware",
-                //     LogLevel.None);
+                logging.AddFilter<SentryMariCommandsLoggerProvider>(
+                    "MariCommands.Middlewares.DefaultExceptionMiddleware",
+                    LogLevel.None);
 
                 logging.Services.AddSentry();
             });

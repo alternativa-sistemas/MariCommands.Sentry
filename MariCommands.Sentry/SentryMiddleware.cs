@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Runtime.ExceptionServices;
 using System.Threading.Tasks;
 using MariCommands;
+using MariCommands.Features;
 using MariCommands.Middlewares;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -63,13 +64,12 @@ namespace MariCommands.Sentry
                 {
                     await next(context);
 
-                    // TODO: Exception Feature.
-                    // // When an exception was handled by other component (i.e: UseExceptionHandler feature).
-                    // var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
-                    // if (exceptionFeature?.Error != null)
-                    // {
-                    //     CaptureException(exceptionFeature.Error);
-                    // }
+                    // When an exception was handled by other component (i.e: UseExceptionHandler feature).
+                    var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    if (exceptionFeature?.Error != null)
+                    {
+                        CaptureException(hub, context, exceptionFeature.Error);
+                    }
                 }
                 catch (Exception e)
                 {
@@ -112,8 +112,7 @@ namespace MariCommands.Sentry
             scope.Sdk.Version = NameAndVersion.Version;
             scope.Sdk.AddPackage(ProtocolPackageName, NameAndVersion.Version);
 
-            // TODO: Set CommandContext#TraceIdentifier
-            //scope.Populate(context, _options);
+            scope.Populate(context, _options);
 
             if (_options?.IncludeActivityData == true && Activity.Current != null)
             {
