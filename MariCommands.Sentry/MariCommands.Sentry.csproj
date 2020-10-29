@@ -5,7 +5,7 @@
     <PackageId>MariCommands.Sentry</PackageId>
     <AssemblyName>MariCommands.Sentry</AssemblyName>
     <RootNamespace>MariCommands.Sentry</RootNamespace>
-    <Version>2.1.6-beta</Version>
+    <Version>2.1.6.1-beta</Version>
     <Authors>renanrcp</Authors>
     <Company>MariBot</Company>
     <Description>MariCommands integration for Sentry - Open-source error tracking that helps developers monitor and fix crashes in real time.</Description>
@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MariCommands" Version="1.0.0.6-alpha" />
+    <PackageReference Include="MariCommands" Version="1.0.0-beta" />
     <PackageReference Include="Sentry.Extensions.Logging" Version="2.1.6" />
   </ItemGroup>
 
